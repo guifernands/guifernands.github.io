@@ -38,7 +38,7 @@ typeEffectHtml();
 
 function typeEffectHtml() {
     const elementoTexto = document.querySelector('.digitando-texto');
-    const texts = ['Front-end', 'JavaScript', 'React (Estudando)'];
+    const texts = ['Fullstack', 'JavaScript', 'Node.js'];
 
     let textoIndice = 0;
     let charIndice = 0;
