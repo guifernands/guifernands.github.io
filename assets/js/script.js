@@ -38,7 +38,7 @@ typeEffectHtml();
 
 function typeEffectHtml() {
     const elementoTexto = document.querySelector('.digitando-texto');
-    const texts = ['Fullstack', 'JavaScript', 'Node.js'];
+    const texts = ['Fullstack', 'React', '.NET (C#)'];
 
     let textoIndice = 0;
     let charIndice = 0;
@@ -74,7 +74,7 @@ function typeEffectHtml() {
 
 /* --- Scroll Reveal (fade in) */
 ScrollReveal({
-    reset: false, /* fade in sem repetição */
+    reset: false,
     distance: '80px',
     duration: 2000,
     delay: 200
