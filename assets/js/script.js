@@ -89,18 +89,30 @@ ScrollReveal().reveal('.home-conteudo h1, .sobre-mim img', { origin: 'left' });
 
 ScrollReveal().reveal('.home-conteudo p, .sobre-mim-content', { origin: 'right' });
 
-ScrollReveal().reveal('.proj-box', { interval: 200 });
+ScrollReveal().reveal('.proj-box, .metrica-item', { interval: 150 });
 
 /* --- Menu mobile --- */
 const menuIcon = document.querySelector('#menu-icon');
 const navbar = document.querySelector('nav ul');
 
-menuIcon.onclick = () => {
-    menuIcon.classList.toggle('fa-xmark'); 
-    navbar.classList.toggle('active');
-};
+if (menuIcon && navbar) {
+    menuIcon.onclick = () => {
+        const menuIconSymbol = menuIcon.querySelector('i');
+        const isOpen = navbar.classList.toggle('active');
 
-navbar.onclick = () => {
-    menuIcon.classList.remove('fa-xmark');
-    navbar.classList.remove('active');
-};
+        menuIcon.setAttribute('aria-expanded', String(isOpen));
+        menuIcon.setAttribute('aria-label', isOpen ? 'Fechar menu' : 'Abrir menu');
+        menuIconSymbol.classList.toggle('fa-bars', !isOpen);
+        menuIconSymbol.classList.toggle('fa-xmark', isOpen);
+    };
+
+    navbar.onclick = () => {
+        const menuIconSymbol = menuIcon.querySelector('i');
+
+        menuIcon.setAttribute('aria-expanded', 'false');
+        menuIcon.setAttribute('aria-label', 'Abrir menu');
+        menuIconSymbol.classList.add('fa-bars');
+        menuIconSymbol.classList.remove('fa-xmark');
+        navbar.classList.remove('active');
+    };
+}

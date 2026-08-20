@@ -3,15 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Guilherme</title>
+    <title>Portfólio | Guilherme Fernandes</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> <!-- icones redes -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text x=%2250%%22 y=%2250%%22 dominant-baseline=%22central%22 text-anchor=%22middle%22 font-size=%2280%22>🎯</text></svg>"> <!-- favicon -->
 </head>
 
 <body>
+    <div class="animated-background" aria-hidden="true">
+        <div class="background-grid"></div>
+    </div>
+
     <header>
         <nav>
+            <button type="button" class="menu-toggle" id="menu-icon" aria-label="Abrir menu" aria-expanded="false">
+                <i class="fa-solid fa-bars" aria-hidden="true"></i>
+            </button>
             <ul class="navbar-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#sobre-mim">Sobre mim</a></li>
@@ -29,7 +36,14 @@
                     <div class="home-conteudo">
                         <p>Olá eu sou</p>
                         <h1>Guilherme Fernandes</h1>
-                        <p class="animacao-texto">Desenvolvedor <span class="digitando-texto">Front-End JavaScript</span></p>
+                        <p class="animacao-texto">Desenvolvedor <span class="digitando-texto">Full Stack</span></p>
+                        <p class="home-resumo">Estudante de Sistemas de Informação com experiência em React, TypeScript, C# e ASP.NET Core.</p>
+                        <div class="home-acoes">
+                            <a href="#projetos" class="btn-primario">Ver projetos</a>
+                            <a href="assets/img/Curriculo Gui.pdf" download="CV_Guilherme_Fernandes" class="btn-secundario">
+                                Baixar currículo <i class="fa-solid fa-file-arrow-down" aria-hidden="true"></i>
+                            </a>
+                        </div>
                     </div>
 
                     <div class="home-img">
@@ -38,17 +52,28 @@
                 </div>
             </section>
 
+            <section class="metricas" aria-label="Destaques profissionais">
+                <div class="metrica-item">
+                    <strong>5h → 1min</strong>
+                    <span>Processo automatizado</span>
+                </div>
+                <div class="metrica-item">
+                    <strong>2</strong>
+                    <span>Projetos freelance entregues</span>
+                </div>
+            </section>
+
             <section class="sobre-mim" id="sobre-mim">
                 <h2>Sobre mim</h2>
-                <p>Acredito que o estudo constante é a chave para a evolução. Quando não estou aprendendo algo novo, muito provavelmente estou em meio ao caos divertido de ter cinco gatos e três cachorros. Gosto de me desafiar, seja nos jogos (apaixonado por souls like e FPS) ou tentando novas manobras no skate. Nas horas vagas nada melhor do que correr, assistir a animes, filmes e séries ou passar um bom tempo de com a família e amigos.</p>
+                <p>Acredito que o estudo constante é a chave para a evolução. Quando não estou aprendendo algo novo, muito provavelmente estou em meio ao caos divertido de ter cinco gatos e um cachorro. Gosto de me desafiar, seja nos jogos (apaixonado por souls like e FPS) ou tentando novas manobras no skate. Nas horas vagas nada melhor do que correr, assistir a animes, filmes e séries ou passar um bom tempo de com a família e amigos.</p>
             </section>
 
             <section class="resumo-profissional">
                 <h2>Resumo Profissional</h2>
                 <p>
-                    Sou estudante de Sistemas da Informação pela UNISINOS e desenvolvedor em formação com foco em Desenvolvimento Full Stack. Tenho experiência prática com React, JavaScript, Vite, Tailwind CSS, C#, ASP.NET Core Web API, Entity Framework Core e PostgreSQL/Neon.
+                    Sou estudante de Sistemas da Informação pela UNISINOS e desenvolvedor em formação com foco em Desenvolvimento Full Stack. Tenho experiência prática com React, TypeScript, JavaScript, C#, ASP.NET Core Web API, Entity Framework Core e PostgreSQL.
                     <br>
-                    Recentemente <span class="destaque">desenvolvi uma aplicação web completa</span> de e-commerce inspirada na KaBuM em um teste técnico de 30 dias, aplicando conceitos de Clean Code, SOLID, DDD, organização em camadas, autenticação, carrinho, pedidos, checkout e painel administrativo.
+                    Recentemente, participei do desenvolvimento de um <span class="destaque">sistema de gestão de empilhadeiras para uso real</span>, atuando principalmente no frontend, integração com API e organização dos fluxos da aplicação.
                     <br>
                     Também tenho experiência com suporte de TI e automação de processos usando JavaScript/Node.js, incluindo uma automação que reduziu uma tarefa administrativa de <span class="destaque">5 horas mensais para cerca de 1 minuto</span>. Busco uma oportunidade como Estagiário ou Desenvolvedor Júnior em Front-end, Full Stack ou Desenvolvimento Web.
                 </p>
@@ -57,50 +82,70 @@
             <section class="projetos" id="projetos">
                 <h2>Projetos</h2>
                 <div class="proj-box">
-                    <img src="assets/img/xablauHome.png" alt="Projeto Funcional de E-commerce" class="proj-img">
+                    <img src="assets/img/procesul-sistema.png" alt="Sistema de gestão de empilhadeiras" class="proj-img">
 
-                    <h3>Projeto Clone de E-commerce Completo (desenvolvido e um ambiente de desenvolvimento real)</h3>
+                    <h3>Sistema de Gestão de Empilhadeiras | Freelance</h3>
                     <p>
-                        Desenvolvi uma aplicação web completa de e-commerce inspirada na KaBuM durante um teste técnico de 30 dias em ambiente real de desenvolvimento, com acompanhamento e orientação de profissionais experientes da área. O projeto inclui autenticação, catálogo de produtos, favoritos, carrinho, cupons, checkout, pedidos e painel administrativo, com foco em usabilidade, responsividade, performance e boas práticas no front-end e back-end.
+                        Sistema web para gestão de máquinas, clientes e chamados de manutenção, com histórico de movimentações, status e prioridades.
                     </p>
-                    <a href="https://github.com/guifernands/xablauProject" target="_blank">Ver Projeto</a>
+                    <dl class="projeto-detalhes">
+                        <div><dt>Atuação</dt><dd>Frontend, integração com API e apoio no backend</dd></div>
+                        <div><dt>Resultado</dt><dd>Sistema comercial entregue para uso real</dd></div>
+                    </dl>
+                    <div class="projeto-tags" aria-label="Tecnologias utilizadas">
+                        <span>React</span><span>TypeScript</span><span>ASP.NET Core</span><span>PostgreSQL</span>
+                    </div>
+                    <a href="https://www.linkedin.com/posts/gui-fernands_sistema-de-gest%C3%A3o-de-empilhadeiras-ugcPost-7495627320075108353-4lgA/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD_qQGkBOIosh3paiI-IeBwYdeHpShpKh50" target="_blank" rel="noopener">Ver apresentação no LinkedIn</a>
+                </div>
+
+                <div class="proj-box">
+                    <img src="assets/img/procesul-landing.png" alt="Landing page institucional da Procesul Empilhadeiras" class="proj-img">
+
+                    <h3>Landing Page Institucional | Freelance</h3>
+                    <p>
+                        Landing page responsiva para apresentação de serviços, identidade visual e contato comercial da empresa.
+                    </p>
+                    <dl class="projeto-detalhes">
+                        <div><dt>Atuação</dt><dd>Planejamento, design e desenvolvimento frontend</dd></div>
+                        <div><dt>Resultado</dt><dd>Site institucional publicado para cliente real</dd></div>
+                    </dl>
+                    <div class="projeto-tags" aria-label="Tecnologias utilizadas">
+                        <span>React</span><span>TypeScript</span><span>Vite</span><span>CSS</span>
+                    </div>
+                    <a href="https://procesulempilhadeiras.com.br/" target="_blank" rel="noopener">Ver Projeto</a>
+                </div>
+
+                <div class="proj-box">
+                    <img src="assets/img/xablauHome.png" alt="Projeto funcional de e-commerce" class="proj-img">
+
+                    <h3>E-commerce Full Stack | Teste técnico de 30 dias</h3>
+                    <p>
+                        Aplicação inspirada na KaBuM com autenticação, catálogo, favoritos, carrinho, checkout, pedidos e painel administrativo.
+                    </p>
+                    <dl class="projeto-detalhes">
+                        <div><dt>Atuação</dt><dd>Desenvolvimento Full Stack</dd></div>
+                        <div><dt>Resultado</dt><dd>Entrega completa em teste técnico de 30 dias</dd></div>
+                    </dl>
+                    <div class="projeto-tags" aria-label="Tecnologias utilizadas">
+                        <span>React</span><span>JavaScript</span><span>C#</span><span>PostgreSQL</span>
+                    </div>
+                    <a href="https://github.com/guifernands/xablauProject" target="_blank" rel="noopener">Ver Projeto</a>
                 </div>
                 <div class="proj-box">
                     <img src="assets/img/gerador-planilha-preview.png" alt="Preview Gerador de Planilhas" class="proj-img">
 
                     <h3>Gerador de Planilhas (projeto real)</h3>
                     <p>
-                        Desenvolvi e implementei em todas filiais da Ótica Popular um script utilizando JavaScript (Node.js) para
-                        automação da geração de planilhas de gestão. A ferramenta processa dados de vendas e estoque,
-                        eliminando o preenchimento manual e reduzindo o tempo da tarefa (de 5 horas mensais para 1 minuto).
+                        Automação para geração de planilhas de gestão a partir de dados de vendas e estoque das filiais da Ótica Popular.
                     </p>
-                    <a href="https://github.com/guifernands/customPlanGenerator" target="_blank">Ver Projeto</a>
-                </div>
-
-                <div class="proj-box">
-                    <img src="assets/img/agenda.png" alt="Preview Agenda Web Segura" class="proj-img">
-
-                    <h3>Agenda Web Segura</h3>
-                    <p>
-                        Sistema de agenda multiusuário desenvolvido com JavaScript e MongoDB. Partindo de um projeto de estudos. Desenvolvi funcionalidades extras como: uma interface com design exclusivo e adicionei validações completas no front-end para otimizar o processamento do servidor.
-                    </p>
-                    <a href="https://github.com/guifernands/agenda" target="_blank">Ver Projeto</a>
-                </div>
-
-                <div class="proj-box">
-                    <img src="assets/img/fast-fingers-preview.png" alt="Preview Fast Fingers" class="proj-img">
-
-                    <h3>Fast Fingers!</h3>
-                    <p>Aplicação interativa para teste de velocidade de digitação. Foco em manipulação de DOM (avançada), eventos em tempo real e lógica.</p>
-                    <a href="https://guifernands.github.io/fast-fingers/" target="_blank">Ver Projeto</a>
-                </div>
-
-                <div class="proj-box">
-                    <img src="assets/img/portfolio-preview.png" alt="Preview Portfólio - Logística" class="proj-img">
-
-                    <h3>Portfólio - Logística</h3>
-                    <p>Projeto focado no CSS trazendo responsividade, uma interface limpa e performática. UX bem estruturado para que os recrutadores tenham uma boa experiência visitando o site (portfólio feito para o meu pai).</p>
-                    <a href="https://cristiano1202.github.io/" target="_blank">Ver Projeto</a>
+                    <dl class="projeto-detalhes">
+                        <div><dt>Atuação</dt><dd>Levantamento, desenvolvimento e implantação</dd></div>
+                        <div><dt>Resultado</dt><dd>Redução de 5 horas mensais para cerca de 1 minuto</dd></div>
+                    </dl>
+                    <div class="projeto-tags" aria-label="Tecnologias utilizadas">
+                        <span>JavaScript</span><span>Node.js</span><span>Automação</span>
+                    </div>
+                    <a href="https://github.com/guifernands/customPlanGenerator" target="_blank" rel="noopener">Ver Projeto</a>
                 </div>
             </section>
 
@@ -119,18 +164,18 @@
                             <h3 class="titulo-cv"><i class="fa-solid fa-graduation-cap"></i> Formação Acadêmica</h3>
                             <div class="item-cv">
                                 <h4>Sistemas da Informação</h4>
-                                <span class="meta">2023 - Presente | UNISINOS | 5º semestre
+                                <span class="meta">2024 - Presente | UNISINOS | 5º semestre
                                 </span>
-                                <p>Métodos ágeis, Engenharia de Software, Banco de Dados, Testes de Software e Fundamentos de Redes e etc.</p>
+                                <p>Conclusão prevista para janeiro de 2028. Formação com foco em Engenharia de Software, Banco de Dados, Testes e fundamentos de redes.</p>
                             </div>
                         </div>
 
                         <div class="grupo-cv">
                             <h3 class="titulo-cv"><i class="fa-solid fa-briefcase"></i> Experiência Profissional</h3>
                             <div class="item-cv">
-                                <h4>Estágio Administrativo / Suporte de TI</h4>
-                                <span class="meta">03/2025 - 03/2026 | Ótica Popular</span>
-                                <p>Gestão de cadastros (clientes e produtos), controle de estoque, manutenção de hardware, configuração de impressoras e rotinas administrativas.</p>
+                                <h4>Assistente Administrativo e Suporte de TI</h4>
+                                <span class="meta">03/2025 - 04/2026 | Ótica Popular</span>
+                                <p>Desenvolvi automação em JavaScript/Node.js para planilhas de gestão, reduzindo uma tarefa de 5 horas mensais para cerca de 1 minuto. Também prestei suporte técnico às filiais.</p>
                             </div>
                         </div>
 
@@ -138,7 +183,7 @@
                             <h3 class="titulo-cv"><i class="fa-solid fa-language"></i> Idiomas</h3>
                             <div class="item-cv">
                                 <h4>Inglês C1</h4>
-                                <p>Nível proficiente avançado na língua. Conversas de forma espontânea e compreenção de textos complexos e longos, utilização nas tarefas diárias e de forma acadêmica e profissional.</p>
+                                <p>Nível avançado para leitura de documentação técnica e comunicação em contextos acadêmicos e profissionais.</p>
                             </div>
                         </div>
                     </div>
@@ -148,6 +193,7 @@
                             <h3 class="titulo-cv"><i class="fa-solid fa-code"></i> Tecnologias</h3>
                             <div class="tags-container">
                                 <span class="tag">React</span>
+                                <span class="tag">TypeScript</span>
                                 <span class="tag">JavaScript</span>
                                 <span class="tag">Vite</span>
                                 <span class="tag">Tailwind CSS</span>
@@ -158,27 +204,17 @@
                                 <span class="tag">.NET</span>
                                 <span class="tag">ASP.NET Core Web API</span>
                                 <span class="tag">Entity Framework Core</span>
-                                <span class="tag">PostgreSQL/Neon</span>
+                                <span class="tag">PostgreSQL</span>
+                                <span class="tag">Supabase</span>
+                                <span class="tag">Neon</span>
                                 <span class="tag">Node.js</span>
                                 <span class="tag">Express.js</span>
-                                <span class="tag">MongoDB</span>
                                 <span class="tag">Git & GitHub</span>
                                 <span class="tag">Clean Code</span>
                                 <span class="tag">SOLID</span>
                             </div>
                         </div>
 
-                        <div class="grupo-cv">
-                            <h3 class="titulo-cv"><i class="fa-solid fa-certificate"></i>Cursos</h3>
-                            <ul style="list-style: none; color: var(--text-secondary);">
-                                <li><span class="destaque">•</span> Curso de Inglês (Em andamento - atualmente C1) - BeWise Idiomas</li><br>
-                                <li><span class="destaque">•</span> Curso de JavaScript e TypeScript do básico ao avançado (Em andamento) - Luiz Otávio Miranda (Udemy)</li><br>
-                                <li><span class="destaque">•</span> Curso de Python 3 do básico ao avançado - com projetos reais (Em andamento) - Luiz Otávio Miranda (Udemy)</li><br>
-                                <li><span class="destaque">•</span> Módulo 5 de 5 HTML5 e CSS3 (Concluído) - Gustavo Guanabara (CursoemVideo)</li><br>
-                                <li><span class="destaque">•</span> Curso de JavaScript e ES6 (Concluído) - Gustavo Guanabara (CursoemVideo)</li><br>
-                                <li><span class="destaque">•</span> Curso Git e GitHub (Concluído) - Gustavo Guanabara (CursoemVideo)</li><br>
-                            </ul>
-                        </div>
                     </div>
                 </div>
 </section>
@@ -234,12 +270,13 @@
         </article>
     </main>
     <script src="https://unpkg.com/scrollreveal"></script> <!-- fade in -->
-    <script src="assets/js/script.js"></script>
+    <script src="assets/js/script.js" defer></script>
     
 
     <a 
         href="assets/img/Curriculo Gui.pdf" download="CV_Guilherme_Fernandes" class="btn-flutuando-cv" title="Baixar Currículo">
         <i class="fa-solid fa-file-arrow-down"></i>
     </a>
+
 </body>
 </html>
